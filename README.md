@@ -1,6 +1,8 @@
 
 # react-native-speach-text
 
+React Native Speach Text is a module that lets you translate plane text into a voice.
+
 ## Getting started
 
 `$ npm install react-native-speach-text --save`
@@ -38,7 +40,43 @@
 ```javascript
 import RNSpeachText from 'react-native-speach-text';
 
-// TODO: What to do with the module?
-RNSpeachText;
+export default SpeachText extends Component{
+  
+  componentDidMount(){
+    RNSpeachText.speak({
+      text : "Hello World this is a react native speach text native module, and this voice will stop in 5,4,3,2,1, now!"
+    });
+    
+    setTimeout(() => {
+      RNSpeachText.stop();
+    },6000);
+  }
+  
+  _getAvailableVoices(){
+     RNSpeachText.supportedVoices((voices) => {
+        console.log(voices,'voices');
+     });
+  }
+  
+  render(){
+    return(
+        <View />
+    );
+  } 
+}
 ```
+
+## Methods
+
+| Method | iOS | Android |
+| ------- | ----| --------|
+| RNSpeachText.speak({ text : "Hello World" }) | yes | yes |
+| RNSpeachText.pause() | yes | yes |
+| RNSpeachText.stop()  | yes | yes |
+| RNSpeachText.resume() | yes | no |
+| RNSpeachText.isPaused((paused) => {}) | yes | yes |
+| RNSpeachText.isSpeaking((speaking) => {}) | yes | yes |
+| RNSpeachText.supportedVoices((voices) => {}) | yes | no |
+
+## Of courseeee, your PR are welcome :)
   
