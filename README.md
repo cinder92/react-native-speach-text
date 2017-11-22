@@ -13,7 +13,6 @@ React Native Speach Text is a module that lets you translate plane text into a v
 
 ### Manual installation
 
-
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
