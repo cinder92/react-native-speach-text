@@ -1,6 +1,5 @@
 //
-//  SpeechText.m
-//  Rancherita
+//  RNSpeechText.m
 //
 //  Created by Dante Cervantes on 18/10/17.
 //  Copyright © 2017 Facebook. All rights reserved.
@@ -29,7 +28,7 @@ RCT_EXPORT_METHOD(speakUtterance:(NSDictionary *)args callback:(RCTResponseSende
   
   // Error if no text is passed
   if (!text) {
-   // RCTLogError(@"[Speech] You must specify a text to speak.");
+    RCTLogError(@"[RNSpeachText] You must specify a text to speak.");
     return;
   }
   
@@ -59,10 +58,6 @@ RCT_EXPORT_METHOD(speakUtterance:(NSDictionary *)args callback:(RCTResponseSende
   
   // Speak
   [self.synthesizer speakUtterance:utterance];
-  
-  /*AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:text];
-  [utterance setVoice:[AVSpeechSynthesisVoice voiceWithLanguage:voice]];
-  [self.synthesizer speakUtterance:utterance];*/
   
   // Return that the speach has started
   callback(@[[NSNull null], @true]);

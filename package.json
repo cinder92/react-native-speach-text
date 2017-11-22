@@ -1,8 +1,8 @@
 
 {
   "name": "react-native-speach-text",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "React Native Library that translate Text into Audio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,17 @@
     "speach-text",
     "speach",
     "text",
-    "siri"
+    "siri",
+    "ios",
+    "android",
+    "native",
+    "module",
+    "react"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cinder92/react-native-speach-text.git"
+  },
   "author": "",
   "license": "",
   "peerDependencies": {
