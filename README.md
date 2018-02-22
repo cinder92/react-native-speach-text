@@ -35,6 +35,20 @@ React Native Speach Text is a module that lets you translate plane text into a v
       compile project(':react-native-speach-text')
   	```
 
+## Background mode
+
+#### iOS
+
+```
+// MARK: - Keep Audio in Background
+  AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+  BOOL ok;
+  NSError *setCategoryError = nil;
+  ok = [audioSession setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+```
+
+#### Android (comming soon)
+
 ## Usage
 ```javascript
 import RNSpeachText from 'react-native-speach-text';
