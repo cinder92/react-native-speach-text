@@ -39,7 +39,7 @@ React Native Speach Text is a module that lets you translate plane text into a v
 
 #### iOS
 
-In AppDelegeate.m put this code inside `didFinishLaunchWithOptions function
+In AppDelegeate.m put this code inside `didFinishLaunchWithOptions` function
 
 ```
 // MARK: - Keep Audio in Background
